@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from pages.login_page import LoginPage
+from ui_tests.pages.login_page import LoginPage
 
 @pytest.fixture
 def driver():
