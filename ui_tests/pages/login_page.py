@@ -3,10 +3,10 @@ from selenium.webdriver.common.by import By
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
-        self.url = "https://practicetestautomation.com/practice-test-login/"  # учебный сайт для тренировки логина
-        self.username_input = (By.ID, "username")
+        self.url = "https://www.saucedemo.com/"
+        self.username_input = (By.ID, "user-name")
         self.password_input = (By.ID, "password")
-        self.submit_button = (By.ID, "submit")
+        self.submit_button = (By.ID, "login-button")
 
     def open(self):
         self.driver.get(self.url)
