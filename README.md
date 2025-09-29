@@ -12,24 +12,6 @@
 
 Цель проекта: показать навыки в различных типах тестирования, автоматизации и документации тестовых сценариев.
 
-## Структура репозитория
-
-portfolio-project/
-│── README.md
-│── ui-tests/
-│ ├── pages/ # Page Object Model
-│ ├── tests/ # Скрипты автотестов
-│ └── requirements.txt # зависимости для Python
-│
-│── api-tests/
-│ ├── collection.json # экспорт коллекции Postman
-│ ├── environment.json # переменные окружения
-│
-│── load-tests/
-│ ├── test-plan.jmx # сценарий нагрузки для JMeter
-│
-└── docs/ # Скриншоты, отчёты, документация
-
 ## Как запускать тесты
 
 ### UI-тесты (Python + Selenium)
