@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "4180880e-034f-41f6-8eb3-801eea9b4864",
+		"name": "Restful-Booker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "43584948",
+		"_collection_link": "https://alex-3791877.postman.co/workspace/Pet-project-on-Flask~ad1f0884-2800-4c58-8b46-84b2480cabbd/collection/43584948-4180880e-034f-41f6-8eb3-801eea9b4864?action=share&source=collection_link&creator=43584948"
+	},
+	"item": [
+		{
+			"name": "GetToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"admin\",\n    \"password\" : \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_URL}}/auth"
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookingIDs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_URL}}/booking"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBooking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Alex\",\n    \"lastname\": \"Piletski\",\n    \"totalprice\": 999999999,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2025-09-29\",\n        \"checkout\": \"2025-10-21\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_URL}}/booking"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBooking",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token = 4145ec006708412",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Alexander\",\n    \"lastname\": \"Piletski\",\n    \"totalprice\": 999999999,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2025-09-29\",\n        \"checkout\": \"2025-10-21\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_URL}}/booking/336"
+			},
+			"response": []
+		},
+		{
+			"name": "PartialUpdateBooking",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token = 4145ec006708412",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\" : \"Anton\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_URL}}/booking/336\n"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBooking",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token = 4145ec006708412",
+						"type": "text"
+					}
+				],
+				"url": "{{base_URL}}/booking/336"
+			},
+			"response": []
+		}
+	]
+}
