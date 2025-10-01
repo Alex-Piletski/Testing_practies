@@ -26,7 +26,7 @@ pytest tests
 Импортируйте коллекцию Postman (collection.json) и окружение (environment.json) в Postman.
 
 ### Нагрузочные тесты (JMeter)
-Откройте load-tests/test-plan.jmx в JMeter и запустите план.
+Откройте load_tests/***.jmx в JMeter и запустите план.
 
 ### Отчёты и документация
 Все отчёты, скриншоты и документация хранятся в папке docs.
